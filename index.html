@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gender Scale Compatibility Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px 24px 28px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    p.subtitle {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+    .row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .field {
+      flex: 1;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+    select {
+      width: 100%;
+      padding: 0.5rem 0.6rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+    }
+    .card {
+      background: #f0f2f5;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    .result-line {
+      margin: 0.25rem 0;
+    }
+    .small {
+      font-size: 0.75rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Gender Scale Compatibility Calculator</h1>
+    <p class="subtitle">Scale: –5 (feminine extreme) → 0 (non-binary) → +5 (masculine extreme)</p>
+
+    <div class="row">
+      <div class="field">
+        <label for="id1">Identity 1</label>
+        <select id="id1"></select>
+      </div>
+      <div class="field">
+        <label for="id2">Identity 2</label>
+        <select id="id2"></select>
+      </div>
+    </div>
+
+    <div class="card" id="results">
+      <p class="result-line" id="id1Display"></p>
+      <p class="result-line" id="id2Display"></p>
+      <p class="result-line" id="distanceDisplay"></p>
+      <p class="result-line" id="straightnessDisplay"></p>
+      <p class="result-line" id="gaynessDisplay"></p>
+      <p class="small">Formula: S = |X₁ − X₂| / 10, G = 1 − S</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
